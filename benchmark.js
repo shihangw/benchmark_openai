@@ -4,7 +4,7 @@ const prompt1930TokenEcho = "Please reorganize the sentences in a long text into
 
 export async function benchmarkOpenAiApi(requestCompletion = fetchOpenAiCompletion) {
   const prompt = prompt1930TokenEcho;
-  const requests = Array(3).fill(0).map(async (_, index) => {
+  const requests = Array(10).fill(0).map(async (_, index) => {
     const start = Date.now();
     const totalTokenUsed = await requestCompletion(prompt);
     const timeElapsed = Date.now() - start;
